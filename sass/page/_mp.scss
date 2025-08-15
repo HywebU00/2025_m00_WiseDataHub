@@ -439,6 +439,7 @@ a.more {
     }
     .dataExpert_contentright {
       flex: 1 1 auto;
+      flex-basis: calc(100% - 28% - (calc((100vw - 1440px) / 2)) - 30px);
       .datalist_group {
         background: #ffffff;
         background: linear-gradient(135deg, rgba(255, 255, 255, 1) 68%, rgba(240, 247, 247, 1) 100%);

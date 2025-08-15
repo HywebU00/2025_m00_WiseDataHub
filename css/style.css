@@ -9450,6 +9450,7 @@ a.more:hover:after, a.more.active:after {
 }
 .dataExpertBox .dataExpert_block .dataExpert_contentright {
   flex: 1 1 auto;
+  flex-basis: calc(72% - (100vw - 1440px) / 2 - 30px);
 }
 .dataExpertBox .dataExpert_block .dataExpert_contentright .datalist_group {
   background: #ffffff;
