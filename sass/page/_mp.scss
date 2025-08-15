@@ -149,11 +149,10 @@ a.more {
         justify-content: center;
         align-items: center;
         position: relative;
-
         margin-top: 140px;
         height: 75%;
         @include screen('notebook') {
-          @include gutter(120px);
+          @include gutter(60px);
           align-items: flex-start;
         }
         @include screen('tablet') {
@@ -198,10 +197,9 @@ a.more {
         position: relative;
         flex: 1 1 auto;
         padding-left: 2em;
-        padding-right: 50px;
+        padding-right: 0px;
         @include screen('mobile') {
-          padding-left: 50px;
-          padding-right: 50px;
+          padding-left: 0px;
         }
         .title {
           // font-size: 5em;

@@ -9128,8 +9128,8 @@ a.more:hover:after, a.more.active:after {
   .materialSliderBox .materialSlider .materialblock .material_content {
     position: relative;
     min-height: 1px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding-left: 30px;
+    padding-right: 30px;
     box-sizing: border-box;
     align-items: flex-start;
   }
@@ -9195,12 +9195,11 @@ a.more:hover:after, a.more.active:after {
   position: relative;
   flex: 1 1 auto;
   padding-left: 2em;
-  padding-right: 50px;
+  padding-right: 0px;
 }
 @media screen and (max-width: 767px) {
   .materialSliderBox .materialSlider .materialblock .material_right {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 0px;
   }
 }
 .materialSliderBox .materialSlider .materialblock .material_right .title {
