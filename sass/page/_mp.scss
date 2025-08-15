@@ -313,6 +313,9 @@ a.more {
   @media (max-width: 1480px) {
     @include gutter(120px);
   }
+  @media (max-width: 900px) {
+    margin-top: -56px;
+  }
   @include screen('mobile') {
     margin-top: 30px;
     margin-bottom: 50px;
