@@ -3252,6 +3252,33 @@ div.tag ul li a:hover {
     display: none;
   }
 }
+.header .navigation .navbtn2 {
+  flex: 0 0 auto;
+}
+.header .navigation .navbtn2 a {
+  display: block;
+  background-color: #e05c51;
+  color: #fff;
+  padding: 18px 30px;
+  font-size: 1.5em;
+  border-radius: 50px;
+  transition: 0.5s;
+}
+.header .navigation .navbtn2 a:hover {
+  background-color: #9e3a24;
+}
+@media screen and (max-width: 991px) {
+  .header .navigation .navbtn2 {
+    margin-top: 5px;
+  }
+  .header .navigation .navbtn2 a {
+    padding: 9px 15px;
+    font-size: 1.25em;
+  }
+  .header .navigation .navbtn2 a span {
+    display: none;
+  }
+}
 
 .search {
   display: flex;

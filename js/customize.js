@@ -300,10 +300,56 @@ $(function () {
     ],
   });
   //立即預約
-  $('.navbtn a, .material_btn a, .dataExpert_btn a, .link_btn a').click(function (e) {
-    $(' body,html')
-      .stop(true, true)
-      .animate({ scrollTop: $('#consultBox').offset().top - 60 }, 200, 'easeOutExpo');
+  // $('.navbtn a, .material_btn a, .dataExpert_btn a, .link_btn a').click(function (e) {
+  //   $(' body,html')
+  //     .stop(true, true)
+  //     .animate({ scrollTop: $('#consultBox').offset().top - 60 }, 200, 'easeOutExpo');
+  // });
+  // $('.navbtn a, .material_btn a, .dataExpert_btn a, .link_btn a').click(function (e) {
+  //   e.preventDefault(); // 避免直接跳轉
+  //   var target;
+
+  //   if ($(window).width() <= 991) {
+  //     // 991px 以下
+  //     target = $('#consultBox .content_right');
+  //   } else {
+  //     // 992px 以上
+  //     target = $('#consultBox');
+  //   }
+
+  //   $('html, body')
+  //     .stop(true, true)
+  //     .animate({ scrollTop: target.offset().top - 60 }, 200, 'easeOutExpo');
+  // });
+  // $('.navbtn2 a').click(function (e) {
+  //   $(' body,html')
+  //     .stop(true, true)
+  //     .animate({ scrollTop: $('#consultBox .content_right').offset().top - 60 }, 200, 'easeOutExpo');
+  // });
+  $(function () {
+    function scrollToTarget() {
+      var ww = $(window).width();
+      var offsetTop;
+
+      if (ww <= 991) {
+        offsetTop = $('#consultBox .content_right').offset().top;
+      } else {
+        offsetTop = $('#consultBox').offset().top - 60;
+      }
+
+      $('html, body').stop(true, true).animate({ scrollTop: offsetTop }, 200, 'easeOutExpo');
+    }
+
+    // 點擊按鈕時
+    $('.navbtn a, .material_btn a, .dataExpert_btn a, .link_btn a').click(function (e) {
+      e.preventDefault();
+      scrollToTarget();
+    });
+
+    // 別頁帶 hash 回來時（或直接在網址輸入 #consultBox）
+    if (window.location.hash === '#consultBox') {
+      setTimeout(scrollToTarget, 100); // 延遲避免 DOM 尚未完全渲染
+    }
   });
 });
 
