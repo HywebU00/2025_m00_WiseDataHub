@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+  <meta name="robots" content="noindex" />
+  <!-- 使用 noindex 禁止 Google 搜尋建立索引，套版時請工程師刪掉這行 -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>慧探集WiseDataHub</title>
+  <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+  <!-- 瀑布流 -->
+  <link rel="stylesheet" type="text/css" href="vendor/gridloading/css/component.css" />
+  <!-- hyUI css -->
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- favicon -->
+  <link href="images/favicon.png" rel="icon" type="image/x-icon" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Huninn&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- 直接跳主內容區 -->
+  <a class="goCenter" href="#aC">按Enter到主內容區</a>
+  <!-- wrapper Start -->
+  <div class="wrapper">
+    <!-- header Start -->
+    <header class="header">
+      <div class="container">
+        <a class="accesskeyItem" href="#aU" id="aU" accesskey="U" aria-label="網站標題">:::</a>
+        <h1>
+          <a href="index.htm"><img src="images/logo.png" alt="慧探集WiseDataHub" /><span>連鎖總部數據智慧中心</span>
+          </a>
+        </h1>
+        <!-- navigation Start -->
+        <nav class="navigation" role="navigation" aria-label="頁首功能列">
+          <!-- 新增div navlist -->
+          <div class="navbtn"><a href="mp.htm#consultBox"><span>體驗轉變・</span>立即預約</a></div>
+        </nav>
+
+        <!-- navigation End -->
+
+      </div>
+    </header>
+    <!-- header End -->
+    <!-- main Start -->
+    <main class="main">
+      <a class="accesskeyItem" href="#ac" id="ac" accesskey="C" aria-label="主要內容區">:::</a>
+      <!-- 任何一個section下一層都要包下一層都要包div container作對齊 -->
+      <section class="appointment_resultsBox col-12 full">
+        <div class="container">
+          <div class="appointment_results_block">
+            <div class="result_block">
+              <div class="result_content">
+                <div class="content_left"><img src="images/materialSlider_leftpic.png" alt=""></div>
+                <div class="content_right">
+                  <div class="title">預約已送出</div>
+                  <div class="subtitle">您的聯絡資訊已送出</div>
+                  <p>諮詢申請已送出，請靜候專人與您聯繫，謝謝！</p>
+                  <div class="back_btn"><a href="mp.htm">返回首頁</a></div>
+                </div>
+
+              </div>
+            </div>
+            <div class="img-container">
+              <img src="images/materialSlider_bg.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <!-- footer Start-->
+    <footer>
+      <div class="container">
+        <a class="accesskeyItem" href="#aZ" id="aZ" accesskey="Z" aria-label="頁尾區">:::</a>
+        <div class="footer_info">
+          <p>
+            &copy; 2024
+            <a class="text-white border-bottom" href="https://www.hyweb.com.tw/">Hyweb Technology Inc.</a>. All Rights Reserved.
+          </p>
+        </div>
+
+      </div>
+    </footer>
+    <!-- footer End -->
+  </div>
+  <a href="javascript:;" class="scrollToTop">回頁首</a>
+  <!-- JQ -->
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <!-- ease -->
+  <script src="vendor/jquery.easing.min.js"></script>
+  <!-- slick -->
+  <script src="vendor/slick/slick.min.js "></script>
+  <!-- lazyload -->
+  <script src="vendor/lazyload/lazyload.js"></script>
+  <!-- scrolltable -->
+  <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+  <script>
+    $('#google-form').submit(function (e) {
+      //在這裡我們要先擋掉form默認事件
+      e.preventDefault();
+
+      if ($('#cname').val() && $('#cid').val() && $('#email').val()) {//需要先確認必填欄位是否填寫
+        $.ajax({
+          // url為Google Form按下submit的aciotn
+          url: "https://docs.google.com/forms/u/0/d/e/1FAIpQLSctBkRuSHwM24D9Yx0pIG88YMr6tGE2W1iavV3G6ctD-934gg/formResponse",
+          crossDomain: true,//解決跨網域CORS的問題
+          data: {// entry.xxxxx 這些需要填寫您表單裡面的值，與其相互對應
+            "entry.1456240837": $('#cname').val(),
+            "entry.1897627721": $('#cid').val(),
+            "entry.316377012": $('#name').val(),
+            "entry.1169347099": $('#email').val(),
+            // "entry.719567082": $('#action').val(),
+            "entry.1511311365": $('#other').val(),
+            "entry.1939173014": $('#phone').val()
+          },
+          type: "POST", //因為是要進行insert的動作，故事用POST
+          dataType: "JSONP",
+          complete: function () {
+            //完成後把這些欄位清空
+            $('#cname').val('')
+            $('#cid').val('')
+            $('#name').val('')
+            $('#email').val('')
+            // $('#action').val('')
+            $('#other').val('')
+            $('#phone').val('')
+            //最後跳轉到感謝的頁面
+            window.location.replace("thank.htm");
+          }
+        });
+      }
+    });
+  </script>
+  <!-- hyUI -->
+  <script src="js/main.js"></script>
+  <!-- 客製js -->
+  <script src="js/customize.js"></script>
+</body>
+
+</html>

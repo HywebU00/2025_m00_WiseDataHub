@@ -1,0 +1,95 @@
+.tabSet {
+  margin: 30px auto;
+
+  .tabItems {
+    display: flex;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .modeBBtn,
+  .tabBtn {
+    flex: 1 1 auto;
+    font-size: 1em;
+    height: 2.8em;
+    text-align: center;
+    border: none;
+    margin: 1px;
+    border-radius: 0;
+    box-shadow: none;
+    background: #ddd;
+    cursor: pointer;
+
+    // &:focus-visible {
+    //   outline: none;
+    //   box-shadow: 0 0px 0px 2px red inset;
+    // }
+
+    &.active {
+      cursor: default;
+      background: $primaryColor;
+      color: #fff;
+    }
+
+    & > * {
+      pointer-events: none;
+    }
+  }
+
+  .tabContent {
+    // display: none;
+    position: relative;
+    box-shadow: #bbb 0 0 0 1px inset;
+
+    // &.active {
+    //   display: block;
+    // }
+
+    .mobileTabBtn {
+      width: 100%;
+      text-align: left;
+      margin: 0;
+      border-radius: 0;
+
+      &.active {
+        background: $primaryColor;
+        color: #fff;
+      }
+    }
+
+    .tabContentIn {
+      padding: 15px;
+
+
+      ul {
+        margin: 0;
+      }
+    }
+  }
+
+  .modeBBtn {
+    width: 100%;
+    margin: 0;
+    display: none;
+  }
+
+  &.modeB {
+    .tabItems {
+      display: none;
+    }
+
+    .tabContent {
+      display: block;
+
+      .tabContentIn {
+        display: none;
+      }
+    }
+  }
+
+  .modeBBtn {
+    display: block;
+  }
+}
