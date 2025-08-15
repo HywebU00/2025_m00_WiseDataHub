@@ -5,13 +5,13 @@
   border-radius: 50%;
   background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.6);
   text-align: center;
-  color: #FFF;
+  color: #fff;
   line-height: 50px;
   text-decoration: none;
   position: fixed;
   bottom: 10px;
   right: 10px;
-  transition: .3s ease-out;
+  transition: 0.3s ease-out;
   display: none;
   z-index: 99999999;
   text-indent: -999999px;
@@ -52,7 +52,7 @@
 //   a.file_#{$fileTypePic} {
 //     background: url(../images/basic/icon_#{$fileTypePic}.png) no-repeat center center;
 //     width: 26px;
-//     height: 28px;   
+//     height: 28px;
 //     font-size: 0;
 //     overflow: hidden;
 //     vertical-align: middle;

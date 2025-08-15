@@ -247,8 +247,8 @@ $(function () {
   if ($('.materialSlider').length > 0) {
     $('.materialSlider').slick({
       mobileFirst: true,
-      // dots: true,
-      arrows: true,
+      dots: false,
+      arrows: false,
       infinite: true,
       autoplaySpeed: 6000,
       autoplay: true,
@@ -300,7 +300,7 @@ $(function () {
     ],
   });
   //立即預約
-  $('.navbtn a').click(function (e) {
+  $('.navbtn a, .material_btn a, .dataExpert_btn a, .link_btn a').click(function (e) {
     $(' body,html')
       .stop(true, true)
       .animate({ scrollTop: $('#consultBox').offset().top - 60 }, 200, 'easeOutExpo');

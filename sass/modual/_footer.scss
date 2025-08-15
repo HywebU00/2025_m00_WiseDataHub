@@ -3,14 +3,14 @@ footer {
   @include clearfix;
   text-align: center;
   font-size: 1em;
-  padding: 1em 0;
+  padding: 10px 0;
   background-color: #db775d;
 
   .container {
     @include gutter;
 
     > div {
-      padding-bottom: 1em;
+      padding-bottom: 0;
     }
 
     display: flex;
