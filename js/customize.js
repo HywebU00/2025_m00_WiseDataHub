@@ -312,7 +312,7 @@ $(function () {
       var offsetTop;
 
       if (ww <= 991) {
-        offsetTop = $('#consultBox .content_right').offset().top;
+        offsetTop = $('#consultBox .content_right').offset().top - 60;
       } else {
         offsetTop = $('#consultBox').offset().top - 60;
       }
