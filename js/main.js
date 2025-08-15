@@ -244,10 +244,10 @@ $(function () {
 
   // 先複製過去
   _menu.clone().removeClass('menu megamenu mainMenu').addClass('sideMainMenu').appendTo(_mArea);
-  changeTag($('.sideMainMenu'), 'div');
+  // changeTag($('.sideMainMenu'), 'div');
   // _megamenu.clone().appendTo(_mArea);
   _nav.clone().appendTo(_mArea);
-  changeTag($('.sidebar .navigation'), 'div');
+  // changeTag($('.sidebar .navigation'), 'div');
 
   _search.clone().appendTo(_body).removeClass('search').addClass('m_search');
   // $('.m_search').attr('aria-hidden', 'true');
