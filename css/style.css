@@ -3091,8 +3091,8 @@ div.tag ul li a:hover {
   max-width: 100%;
   position: relative;
   min-height: 1px;
-  padding-left: 80px;
-  padding-right: 80px;
+  padding-left: 60px;
+  padding-right: 60px;
   box-sizing: border-box;
   overflow: visible;
   position: relative;
@@ -3107,6 +3107,16 @@ div.tag ul li a:hover {
     padding-right: 30px;
     box-sizing: border-box;
     padding-left: 10px;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header > .container {
+    position: relative;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+    padding-left: 0;
   }
 }
 .header > .container .sidebarCtrl {
@@ -3185,11 +3195,6 @@ div.tag ul li a:hover {
 }
 @media screen and (max-width: 767px) {
   .header h1 span {
-    font-size: 1.5rem;
-  }
-}
-@media screen and (max-width: 575px) {
-  .header h1 span {
     display: none;
   }
 }
@@ -3227,56 +3232,100 @@ div.tag ul li a:hover {
 }
 .header .navigation .navbtn {
   flex: 0 0 auto;
+  margin-top: 5px;
 }
-.header .navigation .navbtn a {
+.header .navigation .navbtn ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+.header .navigation .navbtn ul li {
+  margin-left: 5px;
+}
+.header .navigation .navbtn ul li a {
   display: block;
   background-color: #e05c51;
   color: #fff;
-  padding: 18px 30px;
+  padding: 15px 20px;
   font-size: 1.5em;
   border-radius: 50px;
   transition: 0.5s;
 }
-.header .navigation .navbtn a:hover {
+.header .navigation .navbtn ul li a:hover {
   background-color: #9e3a24;
 }
-@media screen and (max-width: 991px) {
-  .header .navigation .navbtn {
-    margin-top: 5px;
+@media (max-width: 1200px) {
+  .header .navigation .navbtn ul li a {
+    font-size: 1.25em;
   }
-  .header .navigation .navbtn a {
+}
+@media screen and (max-width: 991px) {
+  .header .navigation .navbtn ul li a {
     padding: 9px 15px;
     font-size: 1.25em;
   }
-  .header .navigation .navbtn a span {
+  .header .navigation .navbtn ul li a span {
     display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header .navigation .navbtn ul li a {
+    font-size: 1.125em;
+  }
+}
+@media (max-width: 480px) {
+  .header .navigation .navbtn ul li a {
+    font-size: 1em;
   }
 }
 .header .navigation .navbtn2 {
   flex: 0 0 auto;
+  margin-top: 5px;
 }
-.header .navigation .navbtn2 a {
+.header .navigation .navbtn2 ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+}
+.header .navigation .navbtn2 ul li {
+  margin-left: 5px;
+}
+.header .navigation .navbtn2 ul li a {
   display: block;
   background-color: #e05c51;
   color: #fff;
-  padding: 18px 30px;
+  padding: 15px 20px;
   font-size: 1.5em;
   border-radius: 50px;
   transition: 0.5s;
 }
-.header .navigation .navbtn2 a:hover {
+.header .navigation .navbtn2 ul li a:hover {
   background-color: #9e3a24;
 }
-@media screen and (max-width: 991px) {
-  .header .navigation .navbtn2 {
-    margin-top: 5px;
+@media (max-width: 1200px) {
+  .header .navigation .navbtn2 ul li a {
+    font-size: 1.25em;
   }
-  .header .navigation .navbtn2 a {
+}
+@media screen and (max-width: 991px) {
+  .header .navigation .navbtn2 ul li a {
     padding: 9px 15px;
     font-size: 1.25em;
   }
-  .header .navigation .navbtn2 a span {
+  .header .navigation .navbtn2 ul li a span {
     display: none;
+  }
+}
+@media screen and (max-width: 575px) {
+  .header .navigation .navbtn2 ul li a {
+    font-size: 1.125em;
+  }
+}
+@media (max-width: 480px) {
+  .header .navigation .navbtn2 ul li a {
+    font-size: 1em;
   }
 }
 
