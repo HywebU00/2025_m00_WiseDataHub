@@ -3275,8 +3275,12 @@ div.tag ul li a:hover {
   }
 }
 @media (max-width: 480px) {
+  .header .navigation .navbtn ul li {
+    margin-left: 3px;
+  }
   .header .navigation .navbtn ul li a {
     font-size: 1em;
+    padding: 9px 12px;
   }
 }
 .header .navigation .navbtn2 {
@@ -3324,8 +3328,12 @@ div.tag ul li a:hover {
   }
 }
 @media (max-width: 480px) {
+  .header .navigation .navbtn2 ul li {
+    margin-left: 3px;
+  }
   .header .navigation .navbtn2 ul li a {
     font-size: 1em;
+    padding: 9px 12px;
   }
 }
 
